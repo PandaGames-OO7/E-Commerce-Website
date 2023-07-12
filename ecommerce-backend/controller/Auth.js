@@ -84,6 +84,7 @@ exports.resetPasswordRequest = async (req, res) => {
     const html = `<p>Click <a href='${resetPageLink}'>here</a> to Reset Password</p>`;
 
     // lets send email and a token in the mail body so we can verify that user has clicked right link
+    
 
     if (email) {
       const response = await sendMail({ to: email, subject, html });
